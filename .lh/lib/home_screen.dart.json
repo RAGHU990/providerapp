@@ -1,0 +1,34 @@
+{
+    "sourceFile": "lib/home_screen.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1733477016748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733482957344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         child: Column(\r\n           mainAxisAlignment: MainAxisAlignment.center,\r\n           children: [\r\n             Text('Welcome to Supabase Auth!'),\r\n-            SizedBox(height: 20),\r\n+            const SizedBox(height: 20),\r\n             ElevatedButton(\r\n               onPressed: () async {\r\n                 await Supabase.instance.client.auth.signOut();\r\n                 Navigator.pop(context);\r\n"
+                },
+                {
+                    "date": 1733482966521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,14 +4,14 @@\n class HomeScreen extends StatelessWidget {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      appBar: AppBar(title: Text('Home')),\r\n+      appBar: AppBar(title: const Text('Home')),\r\n       body: Center(\r\n         child: Column(\r\n           mainAxisAlignment: MainAxisAlignment.center,\r\n           children: [\r\n-            Text('Welcome to Supabase Auth!'),\r\n+            const Text('Welcome to Supabase Auth!'),\r\n             const SizedBox(height: 20),\r\n             ElevatedButton(\r\n               onPressed: () async {\r\n                 await Supabase.instance.client.auth.signOut();\r\n"
+                },
+                {
+                    "date": 1733482983665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n               onPressed: () async {\r\n                 await Supabase.instance.client.auth.signOut();\r\n                 Navigator.pop(context);\r\n               },\r\n-              child: Text('Sign Out'),\r\n+              child: const Text('Sign Out'),\r\n             ),\r\n           ],\r\n         ),\r\n       ),\r\n"
+                },
+                {
+                    "date": 1733483183844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,34 @@\n import 'package:flutter/material.dart';\r\n import 'package:supabase_flutter/supabase_flutter.dart';\r\n+import 'auth_screen.dart'; // Import your AuthScreen\r\n \r\n class HomeScreen extends StatelessWidget {\r\n   @override\r\n   Widget build(BuildContext context) {\r\n     return Scaffold(\r\n-      appBar: AppBar(title: const Text('Home')),\r\n+      appBar: AppBar(title: Text('Home')),\r\n       body: Center(\r\n         child: Column(\r\n           mainAxisAlignment: MainAxisAlignment.center,\r\n           children: [\r\n-            const Text('Welcome to Supabase Auth!'),\r\n-            const SizedBox(height: 20),\r\n+            Text('Welcome to Supabase Auth!'),\r\n+            SizedBox(height: 20),\r\n             ElevatedButton(\r\n               onPressed: () async {\r\n-                await Supabase.instance.client.auth.signOut();\r\n-                Navigator.pop(context);\r\n+                try {\r\n+                  await Supabase.instance.client.auth.signOut();\r\n+                  // Navigate to sign-in page and remove all previous routes\r\n+                  Navigator.of(context).pushAndRemoveUntil(\r\n+                    MaterialPageRoute(builder: (context) => AuthScreen()),\r\n+                    (route) => false, // Remove all previous routes\r\n+                  );\r\n+                } catch (e) {\r\n+                  // Handle error (optional)\r\n+                  print('Sign out error: $e');\r\n+                }\r\n               },\r\n-              child: const Text('Sign Out'),\r\n+              child: Text('Sign Out'),\r\n             ),\r\n           ],\r\n         ),\r\n       ),\r\n"
+                }
+            ],
+            "date": 1733477016748,
+            "name": "Commit-0",
+            "content": "import 'package:flutter/material.dart';\r\nimport 'package:supabase_flutter/supabase_flutter.dart';\r\n\r\nclass HomeScreen extends StatelessWidget {\r\n  @override\r\n  Widget build(BuildContext context) {\r\n    return Scaffold(\r\n      appBar: AppBar(title: Text('Home')),\r\n      body: Center(\r\n        child: Column(\r\n          mainAxisAlignment: MainAxisAlignment.center,\r\n          children: [\r\n            Text('Welcome to Supabase Auth!'),\r\n            SizedBox(height: 20),\r\n            ElevatedButton(\r\n              onPressed: () async {\r\n                await Supabase.instance.client.auth.signOut();\r\n                Navigator.pop(context);\r\n              },\r\n              child: Text('Sign Out'),\r\n            ),\r\n          ],\r\n        ),\r\n      ),\r\n    );\r\n  }\r\n}\r\n"
+        }
+    ]
+}

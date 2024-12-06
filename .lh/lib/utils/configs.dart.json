@@ -1,0 +1,46 @@
+{
+    "sourceFile": "lib/utils/configs.dart",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1733480673033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1733480678698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,4 @@\n \r\n \r\n \r\n+class  Config\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733480688620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n \r\n \r\n \r\n-class  Config\n\\ No newline at end of file\n+class  Config {\r\n+    s\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733480694160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n \r\n \r\n class  Config {\r\n-    s\r\n+    static const \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733480700940,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n \r\n \r\n class  Config {\r\n-    static const \r\n+    static const supbaseURL =  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733480724152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \r\n \r\n \r\n class  Config {\r\n-    static const supbaseURL =  \r\n+    static const supbaseURL =  \"https://suyhqzawrqlhmueyzdmm.supabase.co\";\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733480730135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n \r\n class  Config {\r\n     static const supbaseURL =  \"https://suyhqzawrqlhmueyzdmm.supabase.co\";\r\n-    stat\r\n+    stati\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1733480738825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \r\n \r\n class  Config {\r\n     static const supbaseURL =  \"https://suyhqzawrqlhmueyzdmm.supabase.co\";\r\n-    static const anon\r\n+    static const anonK\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1733480673033,
+            "name": "Commit-0",
+            "content": "\r\n\r\n\r\n"
+        }
+    ]
+}
